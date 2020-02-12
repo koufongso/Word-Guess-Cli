@@ -3,10 +3,17 @@ function Letter(char) {
     this.guessed = false;
 
     this.getChar = function () {
-        return (this.guessed ? this.chr : "_");
+        return (this.guessed ? this.char : "_");
     }
 
-    this.guess = function (c) { if (char === c) { guessed = true; } }
+    this.guess = function (c) {
+        // console.log("call letter.guess:");
+        // console.log(char + " " + c)
+        if (this.char === c) {
+            this.guessed = true;
+        }
+        return this.guessed;
+    }
 }
 
 
