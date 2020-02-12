@@ -9,12 +9,13 @@ var wordDataBase = ["apple", "horse", "cat", "mouse"];
  */
 function randomPick(){
     var word = wordDataBase[Math.floor(Math.random()*wordDataBase.length)];
-    console.log(word);
+    // console.log(word);
     return new Word(word);
 }
 
 function ask(){
     currentWord = randomPick();
+    console.log("\x1b[0m",currentWord.getWord()+"\n");
     getInput();
 }
 
@@ -29,15 +30,26 @@ function getInput(){
         }
     ])
     .then(answers => {
-        console.log(answers.input)
+        // console.log(answers.input)
         currentWord.guess(answers.input);
         console.log(currentWord.getWord());
-        console.log("------------------------------");
-        if(!currentWord.isClear()){
-            getInput();
+        console.log("\x1b[0m","------------------------------");
+        if(currentWord.isFail()){
+            console.log("\x1b[31m","------------------------------");
+            console.log("You ran out of guesses. Next One >>>");
+            console.log("------------------------------");
+            ask();
         }else{
-            console.log("You got it right. Next One");
+            if(!currentWord.isClear()){
+                getInput();
+            }else{
+                console.log("\x1b[32m","******************************");
+                console.log("You got it right. Next One >>>");
+                console.log("******************************");
+                ask();
+            }
         }
+
     });
 }
 
