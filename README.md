@@ -17,12 +17,12 @@
 
 ### Demo
 
-* All possible cases:
+* All possible cases:  
     ![demo_all_cases](/Demo/demo_all_cases.png)
 
-* Correctly guess the word:
-    ![demo_correct](/Demo/correct.png)
+* Correctly guess the word:  
+    ![demo_correct](/Demo/demo_correct.png)
 
-* Fail to guess the word:
-    ![demo_incorrect](/Demo/incorrect.png)
+* Fail to guess the word:  
+    ![demo_incorrect](/Demo/demo_incorrect.png)
 
