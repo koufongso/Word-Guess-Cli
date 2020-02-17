@@ -21,8 +21,8 @@
     ![demo_all_cases](/Demo/demo_all_cases.png)
 
 * Correctly guess the word:  
-    ![demo_correct](/Demo/demo_correct.png)
+    ![demo_correct](/Demo/demo_correct.PNG)
 
 * Fail to guess the word:  
-    ![demo_incorrect](/Demo/demo_incorrect.png)
+    ![demo_incorrect](/Demo/demo_incorrect.PNG)
 
