@@ -26,7 +26,10 @@ function getInput(){
     .prompt([
         {
             name:"input",
-            message:"Guess a letter."
+            message:"Guess a letter.",
+            validate: function(input){
+               return input.length==1;
+            }
         }
     ])
     .then(answers => {
